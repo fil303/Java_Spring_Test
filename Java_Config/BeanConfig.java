@@ -6,7 +6,7 @@ import org.springframework.context.annotation.Configuration;
 @Configuration
 public class BeanConfig {
     @Bean
-    public Car car(Bike b){
+    public Car car(@Qualifier("bike") Bike b){
         Car c = new Car("Marsitic");
     //  c.setBrandName("BMW");
         c.setBike(b.brandName);
