@@ -8,11 +8,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 
 @Repository("Dao")
-@Transactional
+
 public class Dao {
     @Autowired
     private HibernateTemplate hibernateTemplate;
-
+    @Transactional
     public void save(User person) {
         hibernateTemplate.save(person);
     }
